@@ -11,7 +11,7 @@ public class DatabaseConfig {
     public DataSource dataSource() {
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.driverClassName("org.sqlite.JDBC");
-        dataSourceBuilder.url("jdbc:sqlite:./src/main/resources/database.db");
+        dataSourceBuilder.url("jdbc:sqlite:database.db");
         return dataSourceBuilder.build();
     }
 
