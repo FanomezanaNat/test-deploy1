@@ -1,0 +1,12 @@
+services:
+  - name: CieluxApplication
+    dockerfile: Dockerfile
+    disk: 1
+    ports:
+      - 4005:4005
+    routes:
+      - path: /target
+        command: java -jar target/demo.jar
+    volumes:
+      - name: data
+        path: /data
