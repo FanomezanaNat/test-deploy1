@@ -2,6 +2,10 @@ services:
   - name: CieluxApplication
     dockerfile: Dockerfile
     disk: 1
+    env:
+      - key: JAVA_TOOL_OPTIONS
+        value: "-Xmx400m"  # Limite la mémoire utilisée à 400 Mo
+
     ports:
       - 4005:4005
     routes:
