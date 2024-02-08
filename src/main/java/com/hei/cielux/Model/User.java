@@ -16,7 +16,6 @@ import java.util.UUID;
 public class User implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", updatable = false)
     private UUID id;
     private String first_name;
